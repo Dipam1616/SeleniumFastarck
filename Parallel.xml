@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="ITestListeners.DwsLogin"></listener>
+	</listeners>
+	<test thread-count="6" name="Test1" parallel="classes">
+		<parameter name="url" value="https://www.shoppersstack.com/"></parameter>
+		<groups>
+			<run>
+				<exclude name="smoke"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="TestNGTravel.MakeMyTrip" />
+			<class name="TestNGTravel.AbhiBus" />
+			<class name="TestNGTravel.RedBus" />
+			<class name="TestNGFashion.KalKi" />
+			<class name="TestNGFashion.AjioShop" />
+			<class name="TestNGFashion.DemoWebShop" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="6" name="Test2" parallel="classes">
+		<parameter name="url" value="https://www.redbus.in/"></parameter>
+		<groups>
+			<run>
+				<exclude name="smoke"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="TestNGTravel.MakeMyTrip" />
+			<class name="TestNGTravel.AbhiBus" />
+			<class name="TestNGTravel.RedBus" />
+			<class name="TestNGFashion.KalKi" />
+			<class name="TestNGFashion.AjioShop" />
+			<class name="TestNGFashion.DemoWebShop" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
